@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.tex": "latex",
+        "binary_trees.h": "c"
+    }
+}
