@@ -1,19 +1,6 @@
 #include <stdlib.h>
 #include "binary_trees.h"
 /*
-* Function: max
- * Description: Returns the maximum of two values.
- * Parameters:
- *   a - First value
- *   b - Second value
- * Return: Maximum of a and b
-*/
-size_t max(size_t a, size_t b)
-{
-    return ((a > b) ? a : b);
-}
-
-/*
 *Function: binary_tree_height
  * Description: Calculates the height of a binary tree.
  * Parameters:
@@ -36,5 +23,5 @@ size_t binary_tree_height(const binary_tree_t *tree)
     size_t height_left = binary_tree_height(tree->left);
     size_t height_right = binary_tree_height(tree->right);
 
-    return (max(height_left, height_right) + 1);
+    return (((height_left > height_right) ? height_left : height_right) + 1);
 }
